@@ -2,164 +2,61 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Меню бургеров</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url("https://img.freepik.com/free-photo/flat-lay-burgers-with-copy-space_23-2148234989.jpg?semt=ais_incoming&w=740&q=80") no-repeat center center fixed;
-      background-size: cover;   /* растягивает картинку */
-      background-attachment: fixed; /* фон остаётся при скролле */
-      background-position: center;  /* выравнивает по центру */
-      filter: brightness(1.1) contrast(1.2); /* делаем фон ярче и чётче */
-      color: #fff;
-    }
-
-    /* Верхняя цветная строка */
-    .header {
-      width: 100%;
-      height: 40px;
-      background: linear-gradient(to right, #ff0000, #ffcc00);
-    }
-
-    .menu {
-      display: flex;
-      justify-content: space-between;
-      padding: 30px;
-      background: rgba(0,0,0,0.3); /* лёгкое затемнение, а не 0.7 */
-    }
-
-    .menu-left {
-      width: 50%;
-    }
-
-    .burger {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 25px;
-    }
-
-    .burger img {
-      width: 80px;
-      margin-right: 15px;
-      border-radius: 5px;
-    }
-
-    .burger-info h2 {
-      margin: 0;
-      color: #ffcc00;
-      font-size: 20px;
-      text-shadow: 2px 2px 4px black;
-    }
-
-    .burger-info p {
-      font-size: 14px;
-      margin: 5px 0;
-      color: #eee;
-      text-shadow: 1px 1px 3px black;
-    }
-
-    .price {
-      font-size: 16px;
-      font-weight: bold;
-      margin-top: 5px;
-      text-shadow: 1px 1px 3px black;
-    }
-
-    .stars {
-      color: gold;
-      font-size: 14px;
-      text-shadow: 1px 1px 2px black;
-    }
-
-    .menu-right {
-      width: 45%;
-      text-align: center;
-    }
-
-    .title-box {
-      border: 2px solid white;
-      padding: 15px;
-      display: inline-block;
-      margin-bottom: 20px;
-      background: rgba(0,0,0,0.4);
-    }
-
-    .title-box h1 {
-      font-size: 48px;
-      line-height: 1.2;
-      margin: 0;
-      text-shadow: 3px 3px 6px black;
-    }
-
-    .qr {
-      width: 80px;
-      margin-top: 10px;
-    }
-
-    .big-burger {
-      width: 80%;
-      border-radius: 10px;
-      margin-top: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.7);
-    }
-  </style>
+  <title>Burger menu</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <!-- Верхняя полоса -->
-  <div class="header"></div>
+  <div class="header">🍔 MENU</div>
 
+  <div>
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About us</a>
+    <a href="/menu.html">Menu</a>
+    <a href="/category.html">Category</a>
+
+  </div>
+
+  <!-- Сетка карточек -->
   <div class="menu">
-    <!-- Левая колонка -->
-    <div class="menu-left">
-      <div class="burger">
-        <img src="https://www.photorecept.ru/wp-content/uploads/2021/04/gamburger-v-domashnih-uslovijah-ili-bulochka-s-mjasom-1300x856.jpg" alt="Гамбургер">
-        <div class="burger-info">
-          <h2>ГАМБУРГЕР</h2>
-          <p>Куриный бифштекс, Двойной сыр, марин. огурец, помидор, лук, салат и соус Гриль</p>
-          <div class="price">279 гр./165 Р</div>
-          <div class="stars">★★☆☆☆</div>
-        </div>
-      </div>
-
-      <div class="burger">
-        <img src="https://chefrestoran.ru/wp-content/uploads/2021/11/chemotl.jpg" alt="Чизбургер">
-        <div class="burger-info">
-          <h2>ЧИЗБУРГЕР</h2>
-          <p>Куриный бифштекс, Двойной сыр, марин. огурец, помидор, лук, салат и соус Гриль</p>
-          <div class="price">279 гр./165 Р</div>
-          <div class="stars">★★★★★</div>
-        </div>
-      </div>
-
-      <div class="burger">
-        <img src="https://cdn-kz3.foodpicasso.com/assets/2024/12/03/5133948fe3b52a59d2eda2adf1c92a95---jpeg_1000x_103c0_convert.jpeg" alt="Чикенбургер">
-        <div class="burger-info">
-          <h2>ЧИКЕНБУРГЕР</h2>
-          <p>Куриный бифштекс, Двойной сыр, марин. огурец, помидор, лук, салат и соус Гриль</p>
-          <div class="price">279 гр./165 Р</div>
-          <div class="stars">★★★☆☆</div>
-        </div>
-      </div>
-
-      <div class="burger">
-        <img src="https://img.freepik.com/premium-photo/juicy-beautiful-grilled-burger-close-up-photorealistic-illustration_594970-2085.jpg" alt="Мегабургер">
-        <div class="burger-info">
-          <h2>МЕГАБУРГЕР</h2>
-          <p>Куриный бифштекс, Двойной сыр, марин. огурец, помидор, лук, салат и соус Гриль</p>
-          <div class="price">279 гр./165 Р</div>
-          <div class="stars">★★★★☆</div>
-        </div>
+    <div class="burger">
+      <img src="https://www.photorecept.ru/wp-content/uploads/2021/04/gamburger-v-domashnih-uslovijah-ili-bulochka-s-mjasom-1300x856.jpg" alt="Гамбургер">
+      <div class="burger-info">
+        <h2>HAMBURGER</h2>
+        <p>Chicken steak, double cheese, pickled cucumber, tomato, onion, lettuce and grill sauce</p>
+        <div class="price">1100 tg</div>
+        <div class="stars">★★★☆☆</div>
       </div>
     </div>
 
-    <!-- Правая колонка -->
-    <div class="menu-right">
-      <div class="title-box">
-        <h1>БУР<br>ГЕ<br>РЫ</h1>
-        <img src="https://i.ibb.co/z8X1Hvf/qrcode.png" alt="QR-код" class="qr">
+    <div class="burger">
+      <img src="https://chefrestoran.ru/wp-content/uploads/2021/11/chemotl.jpg" alt="Чизбургер">
+      <div class="burger-info">
+        <h2>CHEESEBURGER</h2>
+        <p>Chicken steak, double cheese, pickled cucumber, tomato, onion, lettuce and grill sauce</p>
+        <div class="price">1190 tg</div>
+        <div class="stars">★★★★★</div>
       </div>
-      <img src="https://i.ibb.co/3NtHG4n/bigburger.png" alt="Большой бургер" class="big-burger">
+    </div>
+
+    <div class="burger">
+      <img src="https://cdn-kz3.foodpicasso.com/assets/2024/12/03/5133948fe3b52a59d2eda2adf1c92a95---jpeg_1000x_103c0_convert.jpeg" alt="Чикенбургер">
+      <div class="burger-info">
+        <h2>CHICKEN BURGER</h2>
+        <p>Chicken steak, double cheese, pickled cucumber, tomato, onion, lettuce and grill sauce</p>
+        <div class="price">1190 tg</div>
+        <div class="stars">★★★☆☆</div>
+      </div>
+    </div>
+
+    <div class="burger">
+      <img src="https://img.freepik.com/premium-photo/juicy-beautiful-grilled-burger-close-up-photorealistic-illustration_594970-2085.jpg" alt="Мегабургер">
+      <div class="burger-info">
+        <h2>MEGA BURGER</h2>
+        <p>Chicken steak, double cheese, pickled cucumber, tomato, onion, lettuce and grill sauce</p>
+        <div class="price">1590 tg</div>
+        <div class="stars">★★★★☆</div>
+      </div>
     </div>
   </div>
 </body>
