@@ -21,7 +21,7 @@
   </nav>
 
   <main class="menu" id="contacts" aria-labelledby="contacts-title">
-    <!-- Левая колонка: адрес, телефон, email, часы -->
+
     <section class="burger contact-card" aria-labelledby="contacts-title">
       <div class="burger-info">
         <h2 id="contacts-title">Our contacts</h2>
@@ -63,7 +63,7 @@
           </div>
 
           <div>
-            <!-- Доп. карта / изображение (можно заменить на iframe с картой) -->
+
             <div style="border-radius:10px; overflow:hidden; box-shadow:0 6px 12px rgba(0,0,0,0.5);">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtfd6Fq-I4ODJZJN8TmClcjKDpyGylZoFHlQ&s"
                    alt="Интерьер бургерной" style="width:100%; display:block; height:180px; object-fit:cover;">
@@ -76,7 +76,6 @@
       </div>
     </section>
 
-    <!-- Правая колонка: форма обратной связи -->
     <aside class="burger" aria-labelledby="form-title">
       <div class="burger-info">
         <h2 id="form-title">Feedback form</h2>
@@ -116,7 +115,6 @@
       </div>
     </aside>
 
-    <!-- Доп. блок — карта / быстрая плашка -->
     <section class="burger" aria-hidden="true">
       <div class="burger-info">
         <h2>Quick information</h2>
@@ -127,14 +125,14 @@
   </main>
 
   <script>
-    // Простая обработка формы на фронтенде (показывает сообщение об успехе).
+   
     (function () {
       const form = document.getElementById('contactForm');
       const success = document.getElementById('successMsg');
 
       form.addEventListener('submit', function (e) {
-        e.preventDefault(); // здесь можно отправить через fetch на бэк; сейчас просто имитация
-        // Базовая валидация
+        e.preventDefault(); 
+
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
         const message = document.getElementById('message').value.trim();
@@ -144,10 +142,9 @@
           return;
         }
 
-        // Показываем "успех"
+   
         success.style.display = 'block';
 
-        // Сброс формы через секунду для наглядности
         setTimeout(() => {
           form.reset();
           success.style.display = 'none';
