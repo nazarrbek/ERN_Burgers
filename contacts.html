@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Burger & Co — Контакты</title>
+ <link rel="stylesheet" href="./css/style.css">
+ 
+</head>
+<body>
+ <div class="header">Contacts</div>
+
+<div class="navbar">
+  <a href="/index.html">Home</a>
+  <a href="/about.html">About us</a>
+  <a href="/menu.html">Menu</a>
+  <a href="/category.html">Category</a>
+  <a href="/contacts.html">Contacts</a>
+  <a href="/category.html">Gallery</a>
+</div>
+  </nav>
+
+  <main class="menu" id="contacts" aria-labelledby="contacts-title">
+    <!-- Левая колонка: адрес, телефон, email, часы -->
+    <section class="burger contact-card" aria-labelledby="contacts-title">
+      <div class="burger-info">
+        <h2 id="contacts-title">Наши контакты</h2>
+        <p class="price">BURGER & CO — вкусно и быстро</p>
+
+        <div class="contacts-grid">
+          <div>
+            <ul class="contact-list" aria-label="Информация о месте">
+              <li>
+                <span class="label">Адрес:</span>
+                <span>г. Нур-Султан, ул. Примерная 12, ТЦ «Food Plaza», 2 этаж</span>
+              </li>
+
+              <li>
+                <span class="label">Телефон:</span>
+                <a class="contact-link" href="tel:+77001234567">+7 (700) 123-45-67</a>
+              </li>
+
+              <li>
+                <span class="label">E-mail:</span>
+                <a class="contact-link" href="mailto:info@burgerco.kz">info@burgerco.kz</a>
+              </li>
+
+              <li>
+                <span class="label">Соц. сети:</span>
+                <a class="contact-link" href="#" target="_blank" rel="noopener">Instagram</a> •
+                <a class="contact-link" href="#" target="_blank" rel="noopener">Telegram</a>
+              </li>
+
+              <li>
+                <span class="label">Режим работы:</span>
+                <div class="hours">
+                  Пн–Пт: 10:00 — 22:00<br/>
+                  Сб–Вс: 11:00 — 23:00<br/>
+                  Кухня до 22:30 (в будни) / до 22:45 (в выходные)
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <!-- Доп. карта / изображение (можно заменить на iframe с картой) -->
+            <div style="border-radius:10px; overflow:hidden; box-shadow:0 6px 12px rgba(0,0,0,0.5);">
+              <img src="https://images.unsplash.com/photo-1541542684-4f3d6d9f2f4b?auto=format&fit=crop&w=800&q=60"
+                   alt="Интерьер бургерной" style="width:100%; display:block; height:180px; object-fit:cover;">
+            </div>
+            <p style="margin-top:12px; font-size:13px; color:#ddd;">
+              Закажите стол или доставку по телефону или через форму — ответим в течение рабочего дня.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Правая колонка: форма обратной связи -->
+    <aside class="burger" aria-labelledby="form-title">
+      <div class="burger-info">
+        <h2 id="form-title">Форма обратной связи</h2>
+        <p>Оставьте сообщение — менеджер свяжется с вами.</p>
+
+        <form class="contact-form" id="contactForm" method="post" action="#" novalidate>
+          <label style="font-size:13px; font-weight:700;">
+            Имя
+            <input type="text" name="name" id="name" placeholder="Ваше имя" required>
+          </label>
+
+          <label style="font-size:13px; font-weight:700;">
+            E-mail
+            <input type="email" name="email" id="email" placeholder="you@example.com" required>
+          </label>
+
+          <label style="font-size:13px; font-weight:700;">
+            Телефон
+            <input type="tel" name="phone" id="phone" placeholder="+7 (700) 123-45-67">
+          </label>
+
+          <label style="font-size:13px; font-weight:700;">
+            Сообщение
+            <textarea name="message" id="message" rows="5" placeholder="Что хотите заказать / вопрос..." required></textarea>
+          </label>
+
+          <button type="submit">Отправить сообщение</button>
+
+          <div class="success" id="successMsg" role="status" aria-live="polite">
+            Спасибо! Ваше сообщение получено — мы свяжемся с вами в ближайшее время.
+          </div>
+        </form>
+
+        <p style="font-size:12px; margin-top:8px; color:#ddd;">
+          Нажимая «Отправить», вы соглашаетесь на обработку персональных данных.
+        </p>
+      </div>
+    </aside>
+
+    <!-- Доп. блок — карта / быстрая плашка -->
+    <section class="burger" aria-hidden="true">
+      <div class="burger-info">
+        <h2>Быстрая информация</h2>
+        <p class="price">Доставка по городу: 400 KZT (от 2000 KZT — бесплатно)</p>
+        <p style="font-size:13px; color:#eee;">Резерв столов доступен онлайн и по телефону.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Простая обработка формы на фронтенде (показывает сообщение об успехе).
+    (function () {
+      const form = document.getElementById('contactForm');
+      const success = document.getElementById('successMsg');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault(); // здесь можно отправить через fetch на бэк; сейчас просто имитация
+        // Базовая валидация
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !message) {
+          alert('Пожалуйста, заполните обязательные поля: имя, e-mail и сообщение.');
+          return;
+        }
+
+        // Показываем "успех"
+        success.style.display = 'block';
+
+        // Сброс формы через секунду для наглядности
+        setTimeout(() => {
+          form.reset();
+          success.style.display = 'none';
+        }, 2500);
+      });
+    })();
+  </script>
+</body>
+</html>
