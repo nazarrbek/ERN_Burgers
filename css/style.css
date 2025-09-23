@@ -1,3 +1,5 @@
+
+/* Стиль для men,category,about*/
 body {
     margin: 0;
     font-family: "Segoe UI", Roboto, Arial, sans-serif;
@@ -129,6 +131,9 @@ h1 {
 }
 
   
+
+/*стиль для index */
+
         body {
             margin: 0;
             font-family: "Segoe UI", Roboto, Arial, sans-serif;
@@ -237,3 +242,6 @@ h1 {
             margin-top: 50px;
             border-top: 2px solid #ffcc00;
         }
+
+    
+/*стиль для contacts*/
