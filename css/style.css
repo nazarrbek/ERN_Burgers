@@ -209,6 +209,7 @@ nav a:hover {
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+            text-decoration: none;
         }
 
 .btn:hover {
@@ -529,4 +530,17 @@ main h1 {
   font-size: 14px;
   color: #ffb703;
 }
+.layout {
+  display: grid;
+  grid-template-areas: 
+    "header"
+    "hero"
+    "main"
+    "footer";
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
+}
+
+
+
 
