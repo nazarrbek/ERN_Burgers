@@ -326,8 +326,7 @@ footer {
     transform: translateY(0);
   }
 }
-<<<<<<< HEAD
-=======
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -532,4 +531,4 @@ main h1 {
   color: #ffb703;
 }
 
->>>>>>> c74485a91be7100cfe7f03e59c727be47a6c0160
+
