@@ -4,48 +4,84 @@
   <meta charset="UTF-8">
   <title>About Us - ERN Burgers</title>
   <link rel="stylesheet" href="./css/style.css">
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "header"
+        "main"
+        "footer";
+      grid-template-rows: auto 1fr auto;
+      min-height: 100vh;
+    }
+    header { 
+      grid-area: header; 
+      display: flex;              
+      justify-content: space-between; 
+      align-items: center;        
+      padding: 10px 20px;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+    main { 
+      grid-area: main; 
+      padding: 20px; 
+    }
+    footer { 
+      grid-area: footer; 
+      background: #222; 
+      color: #fff; 
+      text-align: center; 
+      padding: 15px; 
+    }
+
+    /* Навигация */
+    .nav-links a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .nav-links a:hover {
+      color: #e63946;
+    }
+  </style>
 </head>
 <body>
 
+<div class="grid-container">
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">🍔 ERN Burgers</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="catering.html">Catering</a>
+      <a href="contacts.html">Contacts</a>
+    </nav>
+  </header>
 
-  <div class="header">🍔 ERN BURGERS</div>
-
-
-  <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="about.html" >About us</a>
-    <a href="menu.html">Menu</a>
-    <a href="catering.html">Catering</a>
-    <a href="contacts.html">Contacts</a>
-    <a href="gallery.html">Gallery</a>
-  </div>
-  <div class="about">
-    <div class="about-box">
-
-
-      <div class="about-text">
-        <p>Welcome to <strong>ERN Burgers</strong> –<i>the place where passion for flavor meets the love for people.</i> </p>
-
-        <p><i>Our story started with one simple dream: to create the kind of burger joint we always wanted to visit ourselves. A place where food is fresh, the taste is unforgettable, and the atmosphere makes you feel right at home. We didn’t want just another fast-food spot. We wanted a place that celebrates quality, creativity, and community. That’s how ERN Burgers was born.</p>
-
-        <p>From day one, our philosophy has been simple: only the best makes it to your plate. We carefully choose premium beef for our patties, bake our buns fresh, and source crisp, juicy vegetables from local farms. Each sauce is handcrafted, each recipe tested and improved until it becomes something truly unique. Whether it’s the smoky richness of a BBQ burger, the comfort of a classic cheeseburger, or one of our bold signature creations, every bite is made to be memorable.</p>
-
-        <p>But for us, a burger is more than just food. It’s an experience. The sound of the grill, the smell of fresh bread, the laughter of friends sharing a meal together – this is what we live for. At ERN Burgers, we believe that food has the power to bring people closer. That’s why we’ve created a space where anyone can feel welcome – whether you’re here for a quick lunch, a family dinner, or a late-night bite with friends.</p>
-
-        <p>Our team isn’t just staff – we’re a family. Each member shares the same passion: to serve with a smile, to make your day a little brighter, and to show you that small details matter. Because at the end of the day, it’s not only about what’s on your plate, but also about how you feel when you leave.</p>
-
-        <p>We are proud to be more than just a restaurant. ERN Burgers is a community hub. A place where stories are shared, birthdays are celebrated, and new traditions are made. Every time you walk through our doors, you become part of our story – and we’re honored to be part of yours.</p>
-
-        <p>So, if you’re looking for bold flavors, fresh ingredients, and an atmosphere filled with warmth and energy – you’ve come to the right place. At ERN Burgers, we don’t just make burgers. We make moments worth remembering.</i></p>
-
-        <p><strong>Come hungry, leave happy – that’s the ERN Burgers promise. 🍔🔥</strong></p>
-      </div>
+  <!-- Main -->
+  <main>
+    <h1>About Us</h1>
+    <div class="about-text">
+      <p>Welcome to <strong>ERN Burgers</strong> – <i>the place where passion for flavor meets the love for people.</i></p>
+      <p><i>Our story started with one simple dream: to create the kind of burger joint we always wanted to visit ourselves...</i></p>
+      <p>From day one, our philosophy has been simple: only the best makes it to your plate...</p>
+      <p>But for us, a burger is more than just food. It’s an experience...</p>
+      <p>Our team isn’t just staff – we’re a family...</p>
+      <p>We are proud to be more than just a restaurant...</p>
+      <p><strong>Come hungry, leave happy – that’s the ERN Burgers promise. 🍔🔥</strong></p>
     </div>
-  </div>
+  </main>
 
+  <!-- Footer -->
   <footer>
     <p>Developed by: Nazarbek Amanbek</p>
   </footer>
+</div>
 
 </body>
 </html>
