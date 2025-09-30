@@ -1,18 +1,16 @@
-/* ====== ОБЩИЕ НАСТРОЙКИ СТРАНИЦЫ ====== */
+
 body {
-    margin: 0; /* убираем стандартные отступы */
-    font-family: "Segoe UI", Roboto, Arial, sans-serif; /* шрифты текста */
-    background: url("https://img.freepik.com/free-photo/flat-lay-burgers-with-copy-space_23-2148234989.jpg?semt=ais_incoming&w=740&q=80") 
-                no-repeat center center fixed; /* фон - картинка бургеров */
-    background-size: cover; /* растягиваем картинку на весь экран */
-    color: #fff; /* текст по умолчанию белый */
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: url("https://img.freepik.com/free-photo/flat-lay-burgers-with-copy-space_23-2148234989.jpg?semt=ais_incoming&w=740&q=80") no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
 }
 
-/* ====== ВЕРХНИЙ БАННЕР С НАЗВАНИЕМ ====== */
 .header {
     width: 100%;
     height: 60px;
-    background: linear-gradient(to right, #ff512f, #f09819); /* градиентная заливка */
+    background: linear-gradient(to right, #ff512f, #f09819);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,37 +18,36 @@ body {
     font-weight: bold;
     letter-spacing: 2px;
     color: white;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* тень у текста */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
-/* ====== СЕТКА МЕНЮ БУРГЕРОВ ====== */
+
 .menu {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* карточки в сетке */
-    gap: 25px; /* расстояние между карточками */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
     padding: 40px;
-    backdrop-filter: blur(6px); /* размытый фон */
-    background: rgba(0, 0, 0, 0.4); /* прозрачная подложка */
+    backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.4);
 }
 
-/* ====== КАРТОЧКА БУРГЕРА ====== */
 .burger {
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px; /* скругляем углы */
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* тень */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* плавный эффект */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .burger:hover {
-    transform: translateY(-8px); /* при наведении - чуть поднимается */
+    transform: translateY(-8px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
 }
 
 .burger img {
     width: 100%;
     height: 180px;
-    object-fit: cover; /* картинка заполняет область */
+    object-fit: cover;
 }
 
 .burger-info {
@@ -59,7 +56,7 @@ body {
 
 .burger-info h2 {
     margin: 0 0 10px;
-    color: #ffcc00; /* жёлтый цвет заголовка */
+    color: #ffcc00;
     font-size: 22px;
     text-shadow: 2px 2px 4px black;
 }
@@ -83,7 +80,12 @@ body {
     font-size: 15px;
 }
 
-/* ====== НАВИГАЦИЯ (МЕНЮ ССЫЛОК) ====== */
+h1 {
+    color: red;
+}
+
+
+
 .navbar {
   display: flex;
   justify-content: center;
@@ -91,8 +93,9 @@ body {
   padding: 12px 0;
   gap: 25px;
   backdrop-filter: blur(5px);
-  border-bottom: 2px solid #ffcc00; /* жёлтая линия снизу */
+  border-bottom: 2px solid #ffcc00;
 }
+
 
 .navbar a {
   text-decoration: none;
@@ -113,7 +116,7 @@ body {
 }
 
 .navbar a.active {
-  background: #ffcc00; /* выделение активной страницы */
+  background: #ffcc00;
   color: #000;
 }
 
@@ -143,65 +146,67 @@ body {
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5); 
+           
         }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-}
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+        }
 
-nav {
-    display: flex;
-    gap: 20px;
-}
+        nav {
+            display: flex;
+            gap: 20px;
+        }
 
-nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 8px 16px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-}
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
 
-nav a:hover {
-    background: rgba(255,255,255,0.2);
-    transform: translateY(-3px);
-}
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+        }
 
-/* ====== HERO-СЕКЦИЯ (ПЕРВЫЙ БОЛЬШОЙ БАННЕР) ====== */
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 80px;
-    backdrop-filter: blur(6px);
-    background: rgba(0,0,0,0.5);
-}
+        
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px;
+            backdrop-filter: blur(6px);
+            background: rgba(0,0,0,0.5);
+        }
 
-.hero-text {
-    max-width: 50%;
-}
+        .hero-text {
+            max-width: 50%;
+        }
 
-.hero-text h1 {
-    font-size: 40px;
-    color: #ffcc00;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
-}
+        .hero-text h1 {
+            font-size: 40px;
+            color: #ffcc00;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+        }
 
-.hero-text p {
-    font-size: 18px;
-    margin: 20px 0;
-    line-height: 1.6;
-}
+        .hero-text p {
+            font-size: 18px;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
 
         .btn {
             background: linear-gradient(45deg, #ff512f, #f09819);
             border: none;
             padding: 12px 25px;
+            text-decoration: none;
             font-size: 18px;
             font-weight: bold;
             color: #fff;
@@ -211,29 +216,29 @@ nav a:hover {
             box-shadow: 0 6px 12px rgba(0,0,0,0.5);
         }
 
-.btn:hover {
-    background: linear-gradient(45deg, #f09819, #ff512f);
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.7);
-}
+        .btn:hover {
+            background: linear-gradient(45deg, #f09819, #ff512f);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.7);
+        }
 
-.hero img {
-    max-width: 45%;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.7);
-}
+        .hero img {
+            max-width: 45%;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+        }
 
-/* ====== ФУТЕР ====== */
-footer {
-    background: rgba(0,0,0,0.8);
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    margin-top: 50px;
-    border-top: 2px solid #ffcc00;
-}
+        footer {
+            background: rgba(0,0,0,0.8);
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: 50px;
+            border-top: 2px solid #ffcc00;
+        }
 
-/* ====== ГАЛЕРЕЯ ====== */
+    
+
 .gallery {
   padding: 60px 40px;
   text-align: center;
@@ -277,6 +282,7 @@ footer {
   transition: transform 0.5s ease;
 }
 
+
 .gallery-item:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 24px rgba(0,0,0,0.9);
@@ -285,8 +291,6 @@ footer {
 .gallery-item:hover img {
   transform: scale(1.1);
 }
-
-/* ====== БЛОК "О НАС" ====== */
 .about {
   padding: 60px 40px;
   display: flex;
@@ -300,7 +304,7 @@ footer {
   border-radius: 15px;
   padding: 40px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.7);
-  animation: fadeInUp 1.2s ease; /* анимация появления */
+  animation: fadeInUp 1.2s ease; 
 }
 
 .about-text p {
@@ -315,7 +319,6 @@ footer {
   color: #ffcc00;
 }
 
-/* ====== АНИМАЦИЯ ====== */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -378,18 +381,18 @@ footer {
 }
 .nav-links {
   display: flex;
-  gap: 20px;          
+  gap: 20px;          /* расстояние между ссылками */
   list-style: none;
 }
 
-
+/* карточки в ряд */
 .card-container {
   display: flex;
-  gap: 20px;        
+  gap: 20px;          /* отступы между карточками */
 }
 
 .card {
-  flex: 1;        
+  flex: 1;            /* все карточки равной ширины */
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -399,11 +402,6 @@ footer {
 }
 
 
-
-main {
-  padding: 40px 20px;
-  text-align: center;
-}
 
 main h1 {
   font-size: 36px;
@@ -530,5 +528,4 @@ main h1 {
   font-size: 14px;
   color: #ffb703;
 }
-
 
