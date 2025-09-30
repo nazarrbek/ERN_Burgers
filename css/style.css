@@ -146,7 +146,8 @@ h1 {
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5); 
+           
         }
 
         .logo {
@@ -205,6 +206,7 @@ h1 {
             background: linear-gradient(45deg, #ff512f, #f09819);
             border: none;
             padding: 12px 25px;
+            text-decoration: none;
             font-size: 18px;
             font-weight: bold;
             color: #fff;
@@ -326,6 +328,152 @@ h1 {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+}
+.card {
+  flex: 1;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.card button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #ffcc00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.card button:hover {
+  background: #e6b800;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;          
+  list-style: none;
+}
+
+
+.card-container {
+  display: flex;
+  gap: 20px;        
+}
+
+.card {
+  flex: 1;        
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
+
+main {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+main h1 {
+  font-size: 36px;
+  color: #fff700;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  margin-bottom: 30px;
+}
+
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; 
+}
+
+
+.card {
+  background: #1a1a1a;
+  border: 2px solid #ffcc00;
+  border-radius: 12px;
+  width: 280px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.8);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 20px;
+  color: #ffcc00;
+  margin: 10px 0;
+}
+
+/* Текст карточки */
+.card p {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+/* Кнопка */
+.card .btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: linear-gradient(to right, #ff512f, #f09819);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.card .btn:hover {
+  background: linear-gradient(to right, #f09819, #ff512f);
 }
 
 
