@@ -4,8 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Burger & Co — contacts</title>
- <link rel="stylesheet" href="./css/style.css">
- 
+  <link rel="stylesheet" href="./css/style.css">
+
+  <style>
+  
+    .contact-link {
+      color: rgb(34, 135, 178);               
+      text-decoration: none;    
+      font-weight: 500;
+    }
+
+    .contact-link:hover {
+      color: darkred;           
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
  <div class="header">Contacts</div>
@@ -63,7 +76,6 @@
           </div>
 
           <div>
-
             <div style="border-radius:10px; overflow:hidden; box-shadow:0 6px 12px rgba(0,0,0,0.5);">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtfd6Fq-I4ODJZJN8TmClcjKDpyGylZoFHlQ&s"
                    alt="Интерьер бургерной" style="width:100%; display:block; height:180px; object-fit:cover;">
@@ -125,7 +137,6 @@
   </main>
 
   <script>
-   
     (function () {
       const form = document.getElementById('contactForm');
       const success = document.getElementById('successMsg');
@@ -142,7 +153,6 @@
           return;
         }
 
-   
         success.style.display = 'block';
 
         setTimeout(() => {
@@ -153,7 +163,7 @@
     })();
   </script>
 </body>
-</html>
 <footer>
-<p>Developed by: Zhanabek Eldos</p>
+  <p>Developed by: Zhanabek Eldos</p>
 </footer>
+</html>
