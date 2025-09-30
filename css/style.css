@@ -430,6 +430,7 @@ main h1 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 24px rgba(0,0,0,0.8);
@@ -518,6 +519,7 @@ main h1 {
   margin-bottom: 12px;
 }
 
+
 .price {
   font-size: 16px;
   font-weight: bold;
@@ -529,6 +531,7 @@ main h1 {
   font-size: 14px;
   color: #ffb703;
 }
+
 
 /* Flexbox Navbar */
 .navbar {
@@ -591,3 +594,4 @@ main h1 {
   transform: translateY(-8px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
+
