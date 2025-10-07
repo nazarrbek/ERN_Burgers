@@ -15,10 +15,10 @@
 <body>
     <div class="layout">
 
-        <!-- ✅ ШАГ 2 — адаптивный Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- ✅ Адаптивный Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="index.html">🍔 ERN Burgers</a>
+                <a class="navbar-brand fw-bold fs-4" href="index.html">🍔 ERN Burgers</a>
 
                 <!-- Кнопка-гамбургер -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -30,7 +30,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
                         <li class="nav-item"><a class="nav-link" href="catering.html">Catering</a></li>
                         <li class="nav-item"><a class="nav-link" href="contacts.html">Contacts</a></li>
@@ -40,62 +40,100 @@
             </div>
         </nav>
 
-        <!-- Hero Section -->
-        <section class="hero text-center p-4">
-            <div class="hero-text">
+        <!-- ✅ Hero Section с кнопкой -->
+        <section class="hero text-center bg-light py-5">
+            <div class="container">
                 <h1 class="fw-bold mb-3">YOU HAVE A PARTY – WE HAVE TASTY BURGERS!</h1>
-                <p class="mb-4">
+                <p class="lead mb-4">
                     Look out for our ERN Burgers food truck rolling through the streets of Astana – you never know when we might park up right around the corner, sizzling fresh burgers on the grill. 🚚🔥
                     <br><br>
-                    Want to enjoy our burgers at home? No problem – order delivery and get the same juicy, flavorful experience straight to your door. Hosting a party, office lunch, or special event? Our catering service brings the full ERN Burgers experience to you, complete with all your favorites.
-                    <br><br>
-                    Wherever you are – on the go, at home, or celebrating with friends – you can always count on ERN Burgers to serve bold taste, fresh ingredients, and unforgettable moments. 🍔✨
+                    Want to enjoy our burgers at home? No problem – order delivery and get the same juicy, flavorful experience straight to your door.
                 </p>
-                <a href="contacts.html" class="btn btn-primary btn-lg">Order Now</a>
+                <a href="contacts.html" class="btn btn-warning btn-lg shadow">Order Now</a>
             </div>
-            <img src="https://vgorode.ua/img/article/12491/75_main-v1695288133.jpg" alt="Burger" class="img-fluid mt-4 rounded shadow">
         </section>
 
+        <!-- ✅ Bootstrap Carousel -->
+        <div id="burgerCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" class="d-block w-100" alt="Burger 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1606756790138-0b7b7e8e9c4c" class="d-block w-100" alt="Burger 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1550317138-10000687a72b" class="d-block w-100" alt="Burger 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add" class="d-block w-100" alt="Burger 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330" class="d-block w-100" alt="Burger 5">
+                </div>
+            </div>
+
+            <!-- Управление каруселью -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#burgerCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#burgerCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        <!-- ✅ Раздел с карточками -->
         <main class="container my-5">
-            <h1 class="text-center mb-4 fw-bold">BEST BURGERS</h1>
+            <h2 class="text-center mb-4 fw-bold">BEST BURGERS</h2>
+
+            <div class="d-flex justify-content-center mb-4">
+                <div class="btn-group" role="group" aria-label="Burger Categories">
+                    <button type="button" class="btn btn-outline-warning">All</button>
+                    <button type="button" class="btn btn-outline-warning">Beef</button>
+                    <button type="button" class="btn btn-outline-warning">Chicken</button>
+                    <button type="button" class="btn btn-outline-warning">Vegan</button>
+                </div>
+            </div>
+
             <div class="row g-4 justify-content-center">
                 <div class="col-md-4 col-sm-6">
-                    <div class="card h-100 shadow">
+                    <div class="card h-100 shadow border-0">
                         <img src="https://burgerrecipes.sfo3.digitaloceanspaces.com/wp-content/uploads/2025/08/12011336/Homestyle-5-Guys-Burger.png" class="card-img-top" alt="CLASSIC BURGER">
                         <div class="card-body text-center">
-                            <h3 class="card-title">CLASSIC BURGER</h3>
-                            <p class="card-text">Beef patty, fresh lettuce, tomato, onion and house sauce</p>
-                            <a href="contacts.html" class="btn btn-outline-primary">Order Now</a>
+                            <h4 class="card-title">CLASSIC BURGER</h4>
+                            <p class="card-text">Beef patty, lettuce, tomato, onion, sauce</p>
+                            <a href="contacts.html" class="btn btn-primary">Order Now</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-4 col-sm-6">
-                    <div class="card h-100 shadow">
+                    <div class="card h-100 shadow border-0">
                         <img src="https://images.deliveryhero.io/image/fd-pk/LH/kvmk-listing.jpg" class="card-img-top" alt="DOUBLE CHEESE">
                         <div class="card-body text-center">
-                            <h3 class="card-title">DOUBLE CHEESE</h3>
-                            <p class="card-text">Beef patty, cheddar, mozzarella, cucumber, lettuce and grill sauce</p>
-                            <a href="contacts.html" class="btn btn-outline-primary">Order Now</a>
+                            <h4 class="card-title">DOUBLE CHEESE</h4>
+                            <p class="card-text">Beef patty, cheddar, mozzarella, grill sauce</p>
+                            <a href="contacts.html" class="btn btn-success">Order Now</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-4 col-sm-6">
-                    <div class="card h-100 shadow">
+                    <div class="card h-100 shadow border-0">
                         <img src="https://img.freepik.com/premium-photo/juicy-beautiful-grilled-burger-close-up-photorealistic-illustration_594970-2085.jpg" class="card-img-top" alt="BIG BOSS">
                         <div class="card-body text-center">
-                            <h3 class="card-title">BIG BOSS</h3>
-                            <p class="card-text">Double beef, double cheese, bacon, onion, lettuce, tomato, BBQ sauce</p>
-                            <a href="contacts.html" class="btn btn-outline-primary">Order Now</a>
+                            <h4 class="card-title">BIG BOSS</h4>
+                            <p class="card-text">Double beef, cheese, bacon, tomato, BBQ sauce</p>
+                            <a href="contacts.html" class="btn btn-danger">Order Now</a>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
 
-        <footer class="text-center py-3 bg-dark text-white">
-            <p>Developed by: Nazarbek Amanbek &amp; Guldanа</p>
+        <!-- ✅ Footer -->
+        <footer class="text-center py-3 bg-dark text-white mt-5">
+            <p class="mb-0">Developed by: Nazarbek Amanbek &amp; Guldana</p>
         </footer>
     </div>
 

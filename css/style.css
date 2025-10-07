@@ -722,3 +722,51 @@ main h1 {
     transform: translateY(0);
   }
 }
+/* ===== BURGER CARDS ===== */
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+  background-color: #fff;
+  border-top: 3px solid #ffae42;
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.card-text {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.card .btn {
+  background-color: #ffae42;
+  color: black;
+  border: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.card .btn:hover {
+  background-color: #ffa600;
+  transform: scale(1.05);
+}
