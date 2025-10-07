@@ -711,7 +711,7 @@ main h1 {
   transform: scale(1.05);
 }
 
-/* ===== Анимация появления ===== */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
