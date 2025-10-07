@@ -16,9 +16,9 @@
     <div class="layout">
 
         <!-- ✅ Адаптивный Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="index.html">🍔 ERN Burgers</a>
+                <a class="navbar-brand fw-bold fs-4" href="index.html">🍔 ERN Burgers</a>
 
                 <!-- Кнопка-гамбургер -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -30,7 +30,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
                         <li class="nav-item"><a class="nav-link" href="catering.html">Catering</a></li>
                         <li class="nav-item"><a class="nav-link" href="contacts.html">Contacts</a></li>
@@ -40,15 +40,17 @@
             </div>
         </nav>
 
-        <!-- ✅ Hero Section с Carousel -->
-        <section class="hero text-center p-4">
-            <h1 class="fw-bold mb-3">YOU HAVE A PARTY – WE HAVE TASTY BURGERS!</h1>
-            <p class="mb-4">
-                Look out for our ERN Burgers food truck rolling through the streets of Astana – you never know when we might park up right around the corner, sizzling fresh burgers on the grill. 🚚🔥
-                <br><br>
-                Want to enjoy our burgers at home? No problem – order delivery and get the same juicy, flavorful experience straight to your door.
-            </p>
-            <a href="contacts.html" class="btn btn-warning btn-lg">Order Now</a>
+        <!-- ✅ Hero Section с кнопкой -->
+        <section class="hero text-center bg-light py-5">
+            <div class="container">
+                <h1 class="fw-bold mb-3">YOU HAVE A PARTY – WE HAVE TASTY BURGERS!</h1>
+                <p class="lead mb-4">
+                    Look out for our ERN Burgers food truck rolling through the streets of Astana – you never know when we might park up right around the corner, sizzling fresh burgers on the grill. 🚚🔥
+                    <br><br>
+                    Want to enjoy our burgers at home? No problem – order delivery and get the same juicy, flavorful experience straight to your door.
+                </p>
+                <a href="contacts.html" class="btn btn-warning btn-lg shadow">Order Now</a>
+            </div>
         </section>
 
         <!-- ✅ Bootstrap Carousel -->
@@ -80,9 +82,10 @@
             </button>
         </div>
 
-        <!-- ✅ Меню карточек -->
+        <!-- ✅ Раздел с карточками -->
         <main class="container my-5">
-            <h1 class="text-center mb-4 fw-bold">BEST BURGERS</h1>
+            <h2 class="text-center mb-4 fw-bold">BEST BURGERS</h2>
+
             <div class="d-flex justify-content-center mb-4">
                 <div class="btn-group" role="group" aria-label="Burger Categories">
                     <button type="button" class="btn btn-outline-warning">All</button>
@@ -94,10 +97,10 @@
 
             <div class="row g-4 justify-content-center">
                 <div class="col-md-4 col-sm-6">
-                    <div class="card h-100 shadow">
+                    <div class="card h-100 shadow border-0">
                         <img src="https://burgerrecipes.sfo3.digitaloceanspaces.com/wp-content/uploads/2025/08/12011336/Homestyle-5-Guys-Burger.png" class="card-img-top" alt="CLASSIC BURGER">
                         <div class="card-body text-center">
-                            <h3 class="card-title">CLASSIC BURGER</h3>
+                            <h4 class="card-title">CLASSIC BURGER</h4>
                             <p class="card-text">Beef patty, lettuce, tomato, onion, sauce</p>
                             <a href="contacts.html" class="btn btn-primary">Order Now</a>
                         </div>
@@ -105,10 +108,10 @@
                 </div>
 
                 <div class="col-md-4 col-sm-6">
-                    <div class="card h-100 shadow">
+                    <div class="card h-100 shadow border-0">
                         <img src="https://images.deliveryhero.io/image/fd-pk/LH/kvmk-listing.jpg" class="card-img-top" alt="DOUBLE CHEESE">
                         <div class="card-body text-center">
-                            <h3 class="card-title">DOUBLE CHEESE</h3>
+                            <h4 class="card-title">DOUBLE CHEESE</h4>
                             <p class="card-text">Beef patty, cheddar, mozzarella, grill sauce</p>
                             <a href="contacts.html" class="btn btn-success">Order Now</a>
                         </div>
@@ -116,10 +119,10 @@
                 </div>
 
                 <div class="col-md-4 col-sm-6">
-                    <div class="card h-100 shadow">
+                    <div class="card h-100 shadow border-0">
                         <img src="https://img.freepik.com/premium-photo/juicy-beautiful-grilled-burger-close-up-photorealistic-illustration_594970-2085.jpg" class="card-img-top" alt="BIG BOSS">
                         <div class="card-body text-center">
-                            <h3 class="card-title">BIG BOSS</h3>
+                            <h4 class="card-title">BIG BOSS</h4>
                             <p class="card-text">Double beef, cheese, bacon, tomato, BBQ sauce</p>
                             <a href="contacts.html" class="btn btn-danger">Order Now</a>
                         </div>
@@ -128,8 +131,9 @@
             </div>
         </main>
 
-        <footer class="text-center py-3 bg-dark text-white">
-            <p>Developed by: Nazarbek Amanbek &amp; Guldana</p>
+        <!-- ✅ Footer -->
+        <footer class="text-center py-3 bg-dark text-white mt-5">
+            <p class="mb-0">Developed by: Nazarbek Amanbek &amp; Guldana</p>
         </footer>
     </div>
 
