@@ -660,3 +660,65 @@ main h1 {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== HERO SECTION STYLING ===== */
+.hero {
+  position: relative;
+  background: url("https://vgorode.ua/img/article/12491/75_main-v1695288133.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.hero .btn {
+  background-color: #ffae42;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  padding: 12px 30px;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  background-color: #ffa600;
+  transform: scale(1.05);
+}
+
+/* ===== Анимация появления ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
