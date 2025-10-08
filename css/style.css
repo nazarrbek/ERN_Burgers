@@ -369,3 +369,44 @@ a:hover, button:hover {
   transition: all 0.3s ease;
   opacity: 0.9;
 }
+/* ===== Bootstrap Carousel Custom ===== */
+#burgerCarousel {
+  max-width: 900px;
+  margin: 0 auto;
+  border: 2px solid #ffcc00;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.carousel-inner img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #ffcc00;
+}
+
+.card-custom {
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 2px solid #ffcc00;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-custom:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(255, 204, 0, 0.3);
+}
+
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 2px solid #ffcc00;
+}
+
