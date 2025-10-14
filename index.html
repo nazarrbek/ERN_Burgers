@@ -170,13 +170,13 @@
   <div id="datetime" class="fw-bold"></div>
 </div>
 
+
+
+
         </section>
 
         <!-- ===== FOOTER ===== -->
-        <footer class="text-center py-3 bg-dark text-white mt-5">
-            <p class="mb-0">Team: ERN Burgers | Group SE-2404</p>
-            <p class="mb-0">Members: Eldos Zhanabek & [Second Member]</p>
-        </footer>
+        
     </div>
 
     <!-- ===== SCRIPTS ===== -->
@@ -189,6 +189,48 @@
     document.body.style.backgroundColor = randomColor;
   }
 </script>
+<div class="subscribe-container">
+  <button id="openSubscribe">Subscribe</button>
+</div>
 
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+
+  <button class="accordion-item">What is ERN Burgers?</button>
+  <div class="accordion-panel">
+    <p>ERN Burgers is your favorite spot for delicious handcrafted burgers.</p>
+  </div>
+
+  <button class="accordion-item">Do you offer delivery?</button>
+  <div class="accordion-panel">
+    <p>Yes, we deliver through our partner services across the city.</p>
+  </div>
+
+  <button class="accordion-item">Can I customize my burger?</button>
+  <div class="accordion-panel">
+    <p>Of course! You can add or remove any ingredients as you like.</p>
+  </div>
+</section>
+
+<div id="subscribePopup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="close-popup">&times;</span>
+    <h2>Subscribe to our Newsletter</h2>
+    <p>Get exclusive burger deals and updates straight to your inbox!</p>
+
+    <form id="subscribeForm">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</div>
+<footer class="text-center py-3 bg-dark text-white mt-5">
+    <p class="mb-0">Team: ERN Burgers | Group SE-2401</p>
+    <p class="mb-0">Members: Eldos Zhanabek & Nazarbek Amanbek</p>
+</footer>
+
+
+<script src="js/acordion-nazarbek.js"></script>
+<script src="js/popup-nazarbek.js"></script>
 </body>
 </html>
