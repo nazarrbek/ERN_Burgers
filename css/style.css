@@ -702,6 +702,39 @@ button#submitBtn:hover {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+/* ===== Subscribe Section ===== */
+.subscribe-section {
+  background: #fff5e1;
+  padding: 50px 20px;
+  border-radius: 15px;
+  max-width: 700px;
+  margin: 60px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.subscribe-section h2 {
+  color: #d35400;
+}
+
+.subscribe-section p {
+  color: #555;
+  font-size: 1.1em;
+}
+
+.subscribe-section button {
+  background-color: #e67e22;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-section button:hover {
+  background-color: #d35400;
+}
 
 
 
