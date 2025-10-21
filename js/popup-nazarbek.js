@@ -8,15 +8,15 @@ class PopupForm {
   }
 
   init() {
-    // открыть
+
     this.openButton.addEventListener('click', () => this.open());
-    // закрыть по крестику
+  
     this.closeButton.addEventListener('click', () => this.close());
-    // закрыть по клику вне окна
+
     this.popup.addEventListener('click', (e) => {
       if (e.target === this.popup) this.close();
     });
-    // обработка формы
+
     const form = this.popup.querySelector('form');
     form.addEventListener('submit', (e) => {
       e.preventDefault();
