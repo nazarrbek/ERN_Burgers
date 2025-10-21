@@ -735,6 +735,89 @@ button#submitBtn:hover {
 .subscribe-section button:hover {
   background-color: #d35400;
 }
+/* ===== Nazarbek's JS Assignment 6 Styles ===== */
+.mini-cart-section {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  max-width: 600px;
+  margin: 60px auto;
+  text-align: center;
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+
+.mini-cart-section h2 {
+  color: #ffcc00;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.mini-cart-section button {
+  background: linear-gradient(45deg, #ff512f, #f09819);
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.mini-cart-section button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(45deg, #f09819, #ff512f);
+}
+
+#totalResult {
+  font-size: 1.2rem;
+  color: #ffcc00;
+  margin-top: 15px;
+}
+
+#orderForm {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 30px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+#orderForm input {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: 80%;
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #333;
+  transition: box-shadow 0.3s ease;
+}
+
+#orderForm input:focus {
+  box-shadow: 0 0 8px #ffcc00;
+  outline: none;
+}
+
+#orderForm button {
+  background: #ffcc00;
+  color: #000;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#orderForm button:hover {
+  background: #f1b800;
+  transform: scale(1.05);
+}
 
 
 
