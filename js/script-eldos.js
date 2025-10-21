@@ -1,106 +1,177 @@
-// ===== Task 3: Form Validation (by Eldos) =====
+document.addEventListener("DOMContentLoaded", function () {
+  const changeColorBtn = document.getElementById("changeColorBtn");
+  const keyInfo = document.getElementById("keyInfo");
 
-// Находим элементы формы
-const form = document.getElementById("registerForm");
-const nameInput = document.getElementById("name");
-const emailInput = document.getElementById("email");
-const passwordInput = document.getElementById("password");
-const confirmPasswordInput = document.getElementById("confirmPassword"); // поле для подтверждения пароля
-const successMessage = document.getElementById("form-success"); // блок для сообщения об успехе
+  
+  // Array of background images
+  const images = [
+    "url('https://images.unsplash.com/photo-1606755962773-d324e0a13085')",
+    "url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092')",
+    "url('https://images.unsplash.com/photo-1550547660-d9450f859349')",
+    "url('https://images.unsplash.com/photo-1550317138-10000687a72b')",
+    "url('https://images.unsplash.com/photo-1565958011705-44e21159f42c')"
+  ];
 
-// Функция очистки ошибок
-function clearErrors() {
-  // Находит все элементы с классом "text-danger" и очищает текст ошибок
-  document.querySelectorAll(".text-danger").forEach((el) => (el.textContent = ""));
-}
+  let imageIndex = 0;
 
-// Основная проверка при отправке формы
-form.addEventListener("submit", function (e) {
-  e.preventDefault(); // Отменяем стандартную отправку формы (чтобы не перезагружалась страница)
-  clearErrors();
-
-  let isValid = true; // показывает прошла ли форма проверку
-
-  // Проверка имени
-  if (nameInput.value.trim() === "") {
-    // Если поле пустое
-    document.getElementById("error-name").textContent = "Please enter your name";
-    isValid = false;
+  // Function to change the background
+  function changeBackground() {
+    document.body.style.background = `${images[imageIndex]} no-repeat center center fixed`;
+    document.body.style.backgroundSize = "cover";
+    imageIndex = (imageIndex + 1) % images.length;
   }
 
-  // Проверка email
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // шаблон для проверки email
-  if (!emailPattern.test(emailInput.value)) {
-    // если email не совпадает с шаблоном
-    document.getElementById("error-email").textContent = "Enter a valid email";
-    isValid = false;
-  }
+  // Event when the button is clicked
+  changeColorBtn.addEventListener("click", changeBackground);
 
-  // Проверка пароля
-  if (passwordInput.value.length < 6) {
-    // если пароль короче 6 символов
-    document.getElementById("error-password").textContent =
-      "Password must be at least 6 characters"; // сообщение об ошибке
-    isValid = false;
-  }
+  // Keyboard event listener
+  document.addEventListener("keydown", function (event) {
+    if (!keyInfo) return;
 
-  // Проверка совпадения паролей
-  if (passwordInput.value !== confirmPasswordInput.value) {
-    // если пароли не совпадают
-    document.getElementById("error-confirm").textContent = "Passwords do not match";
-    isValid = false;
-  }
+    // Smooth transition
+    document.body.style.transition = "background-color 0.5s ease, background 0.5s ease";
 
-  // Если все проверки прошли успешно
-  if (isValid) {
-    successMessage.style.display = "block"; // показываем сообщение
-    successMessage.textContent = "✅ Registration successful!"; 
-    form.reset(); // очищаем все поля формы
-  }
+    if (event.key === "ArrowRight") {
+      document.body.style.background = "none";
+      document.body.style.backgroundColor = "#1ab73f"; // green
+      keyInfo.textContent = "➡️ Background changed to green";
+    } 
+    else if (event.key === "ArrowLeft") {
+      document.body.style.background = "none";
+      document.body.style.backgroundColor = "#ec0808"; // red
+      keyInfo.textContent = "⬅️ Background changed to red";
+    } 
+    else if (event.key === " ") {
+      document.body.style.background = "none";
+      document.body.style.backgroundColor = "#d4a50c"; // yellow
+      keyInfo.textContent = "␣ Background changed to yellow";
+    } 
+    else {
+      keyInfo.textContent = `Key pressed: ${event.key}`;
+    }
+
+    // Add animation effect
+    keyInfo.classList.add("active");
+    setTimeout(() => keyInfo.classList.remove("active"), 500);
+  });
 });
 
-// ===== Task 4: Change Background Image (by Eldos) =====
 
+// ===== Task 7: Switch Statement Demo (by Eldos) =====
 
-const images = [
-  "url('https://images.unsplash.com/photo-1724755820537-ad4363bf1172?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8JUQwJUIxJUQxJTgzJUQxJTgwJUQwJUIzJUQwJUI1JUQxJTgwfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600')",
-  "url('https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fCVEMCVCMSVEMSU4MyVEMSU4MCVEMCVCMyVEMCVCNSVEMSU4MHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600')",
-  "url('https://images.unsplash.com/photo-1586190848861-99aa4a171e90')",
-  "url('https://images.unsplash.com/photo-1571091718767-18b5b1457add')",
-  "url('https://images.unsplash.com/photo-1565958011702-44e2110e6db0')",
-  "url('https://images.unsplash.com/photo-1615719413546-198b25453f85')"
-];
+// Находим элементы
+const dayInput = document.getElementById("dayInput");
+const dayResult = document.getElementById("dayResult");
+const checkDayBtn = document.getElementById("checkDayBtn");
 
-let imageIndex = 0; // индекс текущей картинки
-const changeBtn = document.getElementById("changeColorBtn"); // кнопка смены фона
+// Проверяем день недели
+if (checkDayBtn) {
+  checkDayBtn.addEventListener("click", () => {
+    const day = dayInput.value.trim().toLowerCase();
+    let message = "";
 
-if (changeBtn) {
-  changeBtn.addEventListener("click", () => {
-    document.body.style.transition = "background 1s ease"; // плавный переход
-    document.body.style.background = `${images[imageIndex]} no-repeat center center fixed`; // меняем фон
-    document.body.style.backgroundSize = "cover"; // растягиваем под экран
-    imageIndex = (imageIndex + 1) % images.length; // переход к следующему изображению
+    switch (day) {
+      case "monday":
+        message = "Start of the week! Let's be productive 💪";
+        break;
+      case "tuesday":
+        message = "Keep going strong! 💼";
+        break;
+      case "wednesday":
+        message = "Halfway there! 🏃‍♂️";
+        break;
+      case "thursday":
+        message = "Almost Friday 😎";
+        break;
+      case "friday":
+        message = "Weekend is near! 🎉";
+        break;
+      case "saturday":
+      case "sunday":
+        message = "It's the weekend! Time to relax 🛌";
+        break;
+      default:
+        message = "Please enter a valid day (e.g., Monday)";
+    }
+
+    dayResult.textContent = message;
   });
 }
 
-// ===== Task 5: Display Current Date and Time (by Eldos) =====
+// ===== Task 8: Play Sound (by Eldos) =====
+const playBtn = document.getElementById("playSoundBtn");
+const audio = document.getElementById("myAudio");
+const soundInfo = document.getElementById("soundInfo");
 
-function updateDateTime() {
-  const now = new Date(); // получаем текущее время и дату
-  const options = {
-    year: "numeric",
-    month: "long",
-    day: "numeric", // год, месяц и день
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit", // часы, минуты и секунды
-  };
-  const el = document.getElementById("datetime"); // элемент для отображения даты/времени
-  if (el) {
-    // форматирует дату как: October 15, 2025, 06:30:10 PM
-    el.textContent = now.toLocaleString("en-US", options);
-  }
+if (playBtn && audio) {
+  playBtn.addEventListener("click", () => {
+    audio.currentTime = 0; // начинаем звук с начала
+    audio.play();
+    soundInfo.textContent = "🎵 Sound is playing...";
+    setTimeout(() => {
+      soundInfo.textContent = "Click the button to play sound 🎶";
+    }, 2000); // через 2 секунды вернуть текст обратно
+  });
 }
 
-setInterval(updateDateTime, 1000); // обновляем дату и время каждую секунду
-updateDateTime(); // вызываем сразу при загрузке страницы
+// === Animation Example ===
+const animateBtn = document.getElementById("animateBtn");
+const burgerImage = document.getElementById("burgerImage");
+
+if (animateBtn && burgerImage) {
+  animateBtn.addEventListener("click", () => {
+    burgerImage.classList.add("animate");
+
+    // удалить класс после завершения, чтобы можно было снова анимировать
+    burgerImage.addEventListener("animationend", () => {
+      burgerImage.classList.remove("animate");
+    }, { once: true });
+  });
+}
+
+// === Burger Filter Example (forEach / map / filter) ===
+
+// Массив бургеров
+const burgers = [
+  { name: "Classic Burger", price: 1800 },
+  { name: "Cheese Burger", price: 2100 },
+  { name: "Double Burger", price: 2500 },
+  { name: "Veggie Burger", price: 1600 },
+  { name: "Chicken Burger", price: 1900 },
+];
+
+// Элементы HTML
+const burgerList = document.getElementById("burgerList");
+const filterBtn = document.getElementById("filterBtn");
+const showAllBtn = document.getElementById("showAllBtn");
+
+// Функция отображения бургеров
+function displayBurgers(burgerArray) {
+  burgerList.innerHTML = "";
+  burgerArray.forEach((burger) => {
+    const li = document.createElement("li");
+    li.classList.add("list-group-item");
+    li.textContent = `${burger.name} — ${burger.price} ₸`;
+    burgerList.appendChild(li);
+  });
+}
+
+// 1️⃣ map() — добавляем 🔥 к каждому названию
+const decoratedBurgers = burgers.map((burger) => ({
+  name: "🔥 " + burger.name,
+  price: burger.price,
+}));
+
+// 2️⃣ Отображаем все бургеры при загрузке
+displayBurgers(decoratedBurgers);
+
+// 3️⃣ filter() — показываем только дорогие
+filterBtn.addEventListener("click", () => {
+  const expensive = decoratedBurgers.filter((b) => b.price > 2000);
+  displayBurgers(expensive);
+});
+
+// 4️⃣ Показать всех снова
+showAllBtn.addEventListener("click", () => {
+  displayBurgers(decoratedBurgers);
+});

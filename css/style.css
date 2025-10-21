@@ -821,3 +821,21 @@ button#submitBtn:hover {
 
 
 
+
+
+
+@keyframes bounceAndSpin {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+.animate {
+  animation: bounceAndSpin 1s ease-in-out;
+}
