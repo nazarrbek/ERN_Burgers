@@ -1,6 +1,3 @@
-$(document).ready(function(){
-  alert("✅ jQuery подключен и работает!");
-});
 
 // --- Task 1: Live Search ---
 $("#searchInput").on("keyup", function() {
