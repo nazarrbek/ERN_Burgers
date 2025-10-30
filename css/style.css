@@ -850,3 +850,13 @@ button#submitBtn:hover {
     border-radius: 15px;          /* скругление углов (по желанию) */
 }
 
+#scrollBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 6px;
+    width: 0%;
+    background: red;
+    z-index: 99999;
+}
+
