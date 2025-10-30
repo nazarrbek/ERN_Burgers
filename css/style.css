@@ -839,3 +839,14 @@ button#submitBtn:hover {
 .animate {
   animation: bounceAndSpin 1s ease-in-out;
 }
+.container.my-5 {
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+        url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;       /* фон растягивается на всю секцию */
+    background-position: center;  /* центр изображения */
+    background-repeat: no-repeat; /* не повторять */
+    padding: 80px 20px;           /* отступы сверху и снизу */
+    border-radius: 15px;          /* скругление углов (по желанию) */
+}
+
