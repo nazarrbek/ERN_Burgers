@@ -77,53 +77,52 @@
             </button>
         </div>
 
-        <main class="container my-5">
-            <h2 class="text-center mb-4 fw-bold">BEST BURGERS</h2>
+       <main class="container my-5">
+    <h2 class="text-center mb-4 fw-bold">BEST BURGERS</h2>
 
-            <div class="d-flex justify-content-center mb-4">
-                <div class="btn-group" role="group" aria-label="Burger Categories">
-                    <button type="button" class="btn btn-outline-warning">All</button>
-                    <button type="button" class="btn btn-outline-warning">Beef</button>
-                    <button type="button" class="btn btn-outline-warning">Chicken</button>
-                    <button type="button" class="btn btn-outline-warning">Vegan</button>
-                </div>
-            </div>
+    <div class="d-flex justify-content-center mb-4">
+      <div class="btn-group" role="group" aria-label="Burger Categories">
+        <button type="button" class="btn btn-outline-warning filter-btn active" data-category="all">All</button>
+        <button type="button" class="btn btn-outline-warning filter-btn" data-category="beef">Beef</button>
+        <button type="button" class="btn btn-outline-warning filter-btn" data-category="chicken">Chicken</button>
+      </div>
+    </div>
 
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-4 col-sm-6">
-                    <div class="card h-100 shadow border-0">
-                        <img src="https://burgerrecipes.sfo3.digitaloceanspaces.com/wp-content/uploads/2025/08/12011336/Homestyle-5-Guys-Burger.png" class="card-img-top" alt="CLASSIC BURGER">
-                        <div class="card-body text-center">
-                            <h4 class="card-title">CLASSIC BURGER</h4>
-                            <p class="card-text">Beef patty, lettuce, tomato, onion, sauce</p>
-                            <a href="contacts.html" class="btn btn-primary">Order Now</a>
-                        </div>
-                    </div>
-                </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4 col-sm-6 burger-card" data-category="beef">
+        <div class="card h-100 shadow border-0">
+          <img src="https://burgerrecipes.sfo3.digitaloceanspaces.com/wp-content/uploads/2025/08/12011336/Homestyle-5-Guys-Burger.png" class="card-img-top" alt="CLASSIC BURGER">
+          <div class="card-body text-center">
+            <h4 class="card-title">CLASSIC BURGER</h4>
+            <p class="card-text">Beef patty, lettuce, tomato, onion, sauce</p>
+            <a href="contacts.html" class="btn btn-primary">Order Now</a>
+          </div>
+        </div>
+      </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="card h-100 shadow border-0">
-                        <img src="https://images.deliveryhero.io/image/fd-pk/LH/kvmk-listing.jpg" class="card-img-top" alt="DOUBLE CHEESE">
-                        <div class="card-body text-center">
-                            <h4 class="card-title">DOUBLE CHEESE</h4>
-                            <p class="card-text">Beef patty, cheddar, mozzarella, grill sauce</p>
-                            <a href="contacts.html" class="btn btn-success">Order Now</a>
-                        </div>
-                    </div>
-                </div>
+      <div class="col-md-4 col-sm-6 burger-card" data-category="beef">
+        <div class="card h-100 shadow border-0">
+          <img src="https://images.deliveryhero.io/image/fd-pk/LH/kvmk-listing.jpg" class="card-img-top" alt="DOUBLE CHEESE">
+          <div class="card-body text-center">
+            <h4 class="card-title">DOUBLE CHEESE</h4>
+            <p class="card-text">Beef patty, cheddar, mozzarella, grill sauce</p>
+            <a href="contacts.html" class="btn btn-success">Order Now</a>
+          </div>
+        </div>
+      </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="card h-100 shadow border-0">
-                        <img src="https://img.freepik.com/premium-photo/juicy-beautiful-grilled-burger-close-up-photorealistic-illustration_594970-2085.jpg" class="card-img-top" alt="BIG BOSS">
-                        <div class="card-body text-center">
-                            <h4 class="card-title">BIG BOSS</h4>
-                            <p class="card-text">Double beef, cheese, bacon, tomato, BBQ sauce</p>
-                            <a href="contacts.html" class="btn btn-danger">Order Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
+      <div class="col-md-4 col-sm-6 burger-card" data-category="chicken">
+        <div class="card h-100 shadow border-0">
+          <img src="https://img.freepik.com/premium-photo/juicy-beautiful-grilled-burger-close-up-photorealistic-illustration_594970-2085.jpg" class="card-img-top" alt="BIG BOSS">
+          <div class="card-body text-center">
+            <h4 class="card-title">BIG BOSS</h4>
+            <p class="card-text">Chicken fillet, cheese, lettuce, BBQ sauce</p>
+            <a href="contacts.html" class="btn btn-danger">Order Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
         <section id="stats" class="py-5 text-center" style="background-color: #222; color: #fff;">
     <div class="container">
         <h2 class="fw-bold mb-4">Our Achievements</h2>
@@ -288,6 +287,7 @@
 
 
 </body>
+<script src="button.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="js/jquery-tasks.js"></script>
 
