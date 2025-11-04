@@ -1,0 +1,1166 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: url("https://img.freepik.com/free-photo/flat-lay-burgers-with-copy-space_23-2148234989.jpg?semt=ais_incoming&w=740&q=80")
+    no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px 40px;
+  border-bottom: 2px solid #ffcc00;
+  backdrop-filter: blur(5px);
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.nav-links a:hover {
+  background: linear-gradient(45deg, #ff512f, #f09819);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.hero {
+  position: relative;
+  background: url("https://vgorode.ua/img/article/12491/75_main-v1695288133.jpg") center/cover no-repeat;
+  text-align: center;
+  padding: 120px 20px;
+  color: #fff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeInUp 1.2s ease;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  color: #ffcc00;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background: linear-gradient(45deg, #ff512f, #f09819);
+  border: none;
+  padding: 12px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #f09819, #ff512f);
+  transform: translateY(-4px);
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  border-radius: 15px;
+  margin: 40px;
+}
+
+.burger {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.burger:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.7);
+}
+
+.burger img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.burger-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.burger-info h2 {
+  color: #ffcc00;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.burger-info p {
+  color: #eee;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.stars {
+  color: gold;
+  font-size: 15px;
+}
+
+.gallery {
+  padding: 60px 40px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  text-align: center;
+  margin: 40px;
+}
+
+.gallery h1 {
+  font-size: 36px;
+  color: #ffcc00;
+  margin-bottom: 15px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-6px);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.about {
+  padding: 60px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-box {
+  max-width: 900px;
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  animation: fadeInUp 1.2s ease;
+}
+
+.about-text p {
+  color: #f1f1f1;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.about-text strong {
+  color: #ffcc00;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.85);
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  border-top: 2px solid #ffcc00;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .menu {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .gallery {
+    margin: 20px;
+  }
+}
+
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url('https://images.unsplash.com/photo-1606755962773-d324e0a13085') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding-top: 100px;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65); 
+  z-index: 0;
+}
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.2rem;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero .btn-warning {
+  background-color: #ffcc00;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.hero .btn-warning:hover {
+  background-color: #ffaa00;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+}
+
+body {
+  padding-top: 70px;
+}
+.navbar {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(6px);
+  border-bottom: 2px solid #ffcc00;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #ffcc00 !important;
+  font-size: 1.4rem;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+  font-weight: 500;
+  margin: 0 8px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #ffcc00 !important;
+  background: rgba(255, 204, 0, 0.1);
+}
+
+.navbar-toggler {
+  border-color: #ffcc00;
+}
+
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+@media (max-width: 600px) {
+  h1 { font-size: 20px; }
+  .menu img { width: 100%; height: auto; }
+  nav ul { flex-direction: column; text-align: center; }
+  .burger-card { width: 100%; margin-bottom: 20px; }
+}
+
+@media (min-width: 601px) and (max-width: 992px) {
+  h1 { font-size: 28px; }
+  .menu img { width: 80%; }
+}
+
+@media (min-width: 993px) {
+  h1 { font-size: 40px; }
+}
+a:hover, button:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  opacity: 0.9;
+}
+
+#burgerCarousel {
+  max-width: 900px;
+  margin: 0 auto;
+  border: 2px solid #ffcc00;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.carousel-inner img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #ffcc00;
+}
+
+.card-custom {
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 2px solid #ffcc00;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-custom:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(255, 204, 0, 0.3);
+}
+
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 2px solid #ffcc00;
+}
+
+
+/* === Styles for Registration Form (by Eldos) === */
+#registration {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#registration h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.error {
+  color: #c0392b;
+  font-size: 0.9em;
+  margin-top: 4px;
+}
+
+.success {
+  color: #27ae60;
+  font-size: 1em;
+  margin-top: 8px;
+}
+
+button#submitBtn {
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+button#submitBtn:hover {
+  background-color: #21867a;
+}
+/* ===== Registration Form (Task 1 by Eldos) ===== */
+#registration {
+  background-color: #fff9e6;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 60px auto;
+}
+
+#registration h2 {
+  color: #d35400;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#registration label {
+  font-weight: 500;
+  color: #333;
+}
+
+#registration input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+#registration input:focus {
+  border-color: #f39c12;
+  box-shadow: 0 0 5px rgba(243, 156, 18, 0.4);
+  outline: none;
+}
+
+#registration button {
+  background-color: #e67e22;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+#registration button:hover {
+  background-color: #d35400;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 3px;
+}
+
+.success {
+  color: #27ae60;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 15px;
+}
+
+/* ===== Styles for Change Background and Date/Time ===== */
+#changeColorBtn {
+  min-width: 200px;
+}
+
+#datetime {
+  margin-top: 8px;
+  color: #2d2d2d;
+  background: rgba(255,255,255,0.6);
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+/* ===== Accordion (FAQ) ===== */
+.faq-section {
+  background-color: #fff9e6;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.faq-section h2 {
+  color: #d35400;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.accordion-item {
+  background: #f39c12;
+  color: white;
+  cursor: pointer;
+  padding: 14px 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: background 0.3s ease;
+}
+
+.accordion-item:hover {
+  background: #d35400;
+}
+
+.accordion-item.active {
+  background: #e67e22;
+}
+
+.accordion-panel {
+  background: #fff;
+  color: #333;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 20px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-item.active + .accordion-panel {
+  padding: 5px 20px 10px 20px; 
+}
+
+.subscribe-container {
+  text-align: center;
+  margin: 50px 0;
+}
+
+#openSubscribe {
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#openSubscribe:hover {
+  background-color: #d35400;
+}
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.popup-content {
+  background-color: #fff9e6;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  text-align: center;
+  animation: popupIn 0.3s ease;
+}
+
+.popup-content h2 {
+  color: #d35400;
+  margin-bottom: 10px;
+}
+
+.popup-content p {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.popup-content input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.popup-content button {
+  background-color: #e67e22;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.popup-content button:hover {
+  background-color: #d35400;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #e67e22;
+}
+
+.close-popup:hover {
+  color: #d35400;
+}
+
+@keyframes popupIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+/* ===== Subscribe Section ===== */
+.subscribe-section {
+  background: #fff5e1;
+  padding: 50px 20px;
+  border-radius: 15px;
+  max-width: 700px;
+  margin: 60px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.subscribe-section h2 {
+  color: #d35400;
+}
+
+.subscribe-section p {
+  color: #555;
+  font-size: 1.1em;
+}
+
+.subscribe-section button {
+  background-color: #e67e22;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-section button:hover {
+  background-color: #d35400;
+}
+/* ===== Nazarbek's JS Assignment 6 Styles ===== */
+.mini-cart-section {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  max-width: 600px;
+  margin: 60px auto;
+  text-align: center;
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+
+.mini-cart-section h2 {
+  color: #ffcc00;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.mini-cart-section button {
+  background: linear-gradient(45deg, #ff512f, #f09819);
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.mini-cart-section button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(45deg, #f09819, #ff512f);
+}
+
+#totalResult {
+  font-size: 1.2rem;
+  color: #ffcc00;
+  margin-top: 15px;
+}
+
+#orderForm {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 30px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+#orderForm input {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: 80%;
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #333;
+  transition: box-shadow 0.3s ease;
+}
+
+#orderForm input:focus {
+  box-shadow: 0 0 8px #ffcc00;
+  outline: none;
+}
+
+#orderForm button {
+  background: #ffcc00;
+  color: #000;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#orderForm button:hover {
+  background: #f1b800;
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+@keyframes bounceAndSpin {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+.animate {
+  animation: bounceAndSpin 1s ease-in-out;
+}
+.container.my-5 {
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+        url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;       /* фон растягивается на всю секцию */
+    background-position: center;  /* центр изображения */
+    background-repeat: no-repeat; /* не повторять */
+    padding: 80px 20px;           /* отступы сверху и снизу */
+    border-radius: 15px;          /* скругление углов (по желанию) */
+}
+
+#scrollBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 6px;
+    width: 0%;
+    background: red;
+    z-index: 99999;
+}
+    body {
+      padding-top: 80px; 
+    }
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+    .navbar a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 500;
+    }
+    .navbar a:hover {
+      color: rgb(255, 255, 255);
+    }
+
+  
+    /* небольшой запас, чтобы контент не прятался за fixed-top navbar */
+    body { padding-top: 80px; }
+
+    .menu {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px 15px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .burger {
+      background: #fff;
+      border-radius: .5rem;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      min-height: 100%;
+    }
+
+    .burger img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .burger-info {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .burger-info h2 { margin-bottom: 0; font-size: 1.25rem; }
+    .price { font-weight: 700; color: #ff8c00; }
+    .stars { color: #f4c150; font-size: 1rem; }
+
+    @media (max-width: 576px) {
+      body { padding-top: 70px; }
+      .burger img { height: 150px; }
+    }
+  
+      
+    /* небольшой запас, чтобы контент не прятался за fixed-top navbar */
+    body { padding-top: 80px; }
+
+    .gallery {
+      padding: 40px 0;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: .25rem;
+      display: block;
+    }
+
+    .gallery-item .caption {
+      text-align: center;
+      margin-top: .5rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 576px) {
+      .gallery-item img { height: 160px; }
+      body { padding-top: 70px; }
+    }
+  
+
+/*Task 1. Functional Responsive Layout
+/* For tablets */
+@media (max-width: 992px) {
+  h1 {
+    font-size: 28px;
+  }
+  .navbar-brand {
+    font-size: 20px;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 576px) {
+  h1 {
+    font-size: 22px;
+  }
+  .card img {
+    height: 180px;
+    object-fit: cover;
+  }
+  #searchInput {
+    width: 90% !important;
+  }
+}
+
+.navbar-nav .nav-link {
+  margin: 5px 0;
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 10px;
+  }
+}
+/* ====== THEME (LIGHT / DARK) ====== */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222;
+  --navbar-bg: #212529;
+  --card-bg: #fff;
+  --card-text: #222;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f1f1f1;
+  --navbar-bg: #1f1f1f;
+  --card-bg: #1e1e1e;
+  --card-text: #f9f9f9;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.4s, color 0.4s;
+}
+
+.navbar {
+  background-color: var(--navbar-bg) !important;
+}
+
+.card {
+  background-color: var(--card-bg);
+  color: var(--card-text);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-warning:focus,
+.btn-warning:focus,
+.nav-link:focus {
+  outline: 2px solid #ffb400;
+  outline-offset: 2px;
+}
+/* Светлая тема */
+body.light-mode #stats {
+  background-color: #f8f9fa; /* светлый цвет как у navbar в day mode */
+  color: #212529; /* тёмный текст */
+}
+
+/* Тёмная тема */
+body.dark-mode #stats {
+  background-color: #212529; /* фон как navbar в dark mode */
+  color: white;
+}
+/* THEME CLASSES — убедитесь, что этот блок идёт в самом конце style.css */
+body {
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+/* Default (light) */
+body.light-mode {
+  --site-bg: #ffffff;
+  --site-text: #212529;
+  --navbar-bg: #f8f9fa; /* светлый navbar */
+  --stats-bg: #f8f9fa;
+}
+
+/* Dark */
+body.dark-mode {
+  --site-bg: #121212;
+  --site-text: #f1f1f1;
+  --navbar-bg: #212529; /* тёмный navbar */
+  --stats-bg: #212529;
+}
+
+/* Apply variables */
+body {
+  background-color: var(--site-bg);
+  color: var(--site-text);
+}
+
+/* Navbar uses same variable (если у тебя navbar цвет задан напрямую, поменяй на переменную) */
+.navbar {
+  background-color: var(--navbar-bg) !important;
+}
+
+/* Stats section background sync with navbar */
+#stats {
+  background-color: var(--stats-bg);
+  color: var(--site-text);
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+/* Если у тебя были inline-правила для #stats (например background-image),
+   и они перекрывают фон — добавь приоритет для цвета */
+body.light-mode #stats,
+body.dark-mode #stats {
+  background-image: none !important;
+}
+
+/* Немного отступа/высоты для видимости */
+#stats {
+  padding: 60px 0;
+}
+
+
+/* Общий стиль карточек */
+.menu {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 2rem;
+}
+
+.burger {
+  background-color: var(--burger-bg);
+  color: var(--burger-text);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.burger img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.burger-info {
+  padding: 1.5rem;
+}
+
+/* Светлая тема */
+body.light-mode {
+  --burger-bg: #fff;
+  --burger-text: #212529;
+}
+
+/* Тёмная тема */
+body.dark-mode {
+  --burger-bg: #1c1c1c;
+  --burger-text: #f8f9fa;
+}
+
+/* Эффект наведения одинаковый для обеих тем */
+.burger:hover {
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.6);
+  transform: translateY(-5px);
+}
+
+/* Цена и звёзды */
+.price {
+  color: #ffc107;
+  font-weight: 600;
+}
+
+.stars {
+  font-size: 1.2rem;
+  color: #ffc107;
+}
+/* Светлая тема — по умолчанию текст остаётся тёмным */
+#about {
+  color: #000;
+}
+
+/* Когда активирована тёмная тема */
+[data-bs-theme="dark"] #about {
+  color: #fff; /* весь текст внутри about становится белым */
+}
+
+
+
+ 

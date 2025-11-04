@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery – ERN Burgers</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">🍔 ERN Burgers</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html" aria-current="page">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="catering.html">Catering</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacts.html">Contacts</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+
+        <!-- Кнопка смены темы -->
+        <li class="nav-item ms-3">
+          <button id="theme-toggle" class="btn btn-outline-light btn-sm" aria-pressed="false" aria-label="Toggle light and dark mode">
+            <span id="theme-icon">🌙</span>
+            <span class="visually-hidden" id="theme-label">Switch theme</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- GALLERY -->
+  <section class="gallery container">
+    <h1 class="text-center mb-2 fw-bold">Our Gallery</h1>
+    <p class="text-center mb-4 text-light">Some delicious moments from ERN Burgers 🍔✨</p>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://img.freepik.com/free-photo/front-view-tasty-meat-burger_23-2148290624.jpg" alt="Classic Burger" loading="lazy">
+        <div class="caption">Classic Burger</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://img.freepik.com/free-photo/tasty-burger-with-sesame-bun_23-2148290656.jpg" alt="Cheese Delight" loading="lazy">
+        <div class="caption">Cheese Delight</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://img.freepik.com/free-photo/side-view-tasty-burger_23-2148290667.jpg" alt="Crispy Chicken" loading="lazy">
+        <div class="caption">Crispy Chicken</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://img.freepik.com/free-photo/front-view-burger-with-fries_23-2148290645.jpg" alt="Big Boss" loading="lazy">
+        <div class="caption">Big Boss</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://img.freepik.com/free-photo/delicious-burger-isolated-white_23-2148290681.jpg" alt="Smoky Burger" loading="lazy">
+        <div class="caption">Smoky Burger</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://img.freepik.com/free-photo/delicious-burger-with-fresh-ingredients_23-2148290679.jpg" alt="BBQ King" loading="lazy">
+        <div class="caption">BBQ King</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://img.freepik.com/free-photo/appetizing-hamburger-with-cheese_23-2148290680.jpg" alt="Italian Burger" loading="lazy">
+        <div class="caption">Italian Burger</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://img.freepik.com/free-photo/burger-with-fried-egg_23-2148290658.jpg" alt="Pepper Burger" loading="lazy">
+        <div class="caption">Pepper Burger</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://img.freepik.com/free-photo/delicious-hamburger-white-background_23-2148290646.jpg" alt="Tower Burger" loading="lazy">
+        <div class="caption">Tower Burger</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-3 bg-dark text-white mt-5">
+    <div class="container">
+      <p class="mb-0">Developed by: Zhanabek Eldos &amp; Amanbek Nazarbek</p>
+      <p id="datetime" class="mb-0 fw-bold mt-2"></p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- small script: highlight active nav link & show datetime -->
+  <script>
+    // highlight active nav link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      try {
+        const linkPath = new URL(link.href, location.href).pathname;
+        if (linkPath === location.pathname) {
+          link.classList.add('active');
+        }
+      } catch(e) { /* ignore malformed hrefs */ }
+    });
+
+    // datetime (if you already have script-eldos.js which sets datetime, this is safe fallback)
+    function updateDatetime() {
+      const el = document.getElementById('datetime');
+      if(!el) return;
+      const now = new Date();
+      el.textContent = now.toLocaleString();
+    }
+    updateDatetime();
+    setInterval(updateDatetime, 1000);
+  </script>
+
+  <!-- your other project scripts (if any) -->
+  <script src="js/script-eldos.js"></script>
+  <script src="js/jquery-features.js"></script>
+  <script src="js/script-nazarbek.js"></script>
+</body>
+</html>
