@@ -1165,14 +1165,9 @@ body.dark-mode {
   max-width: 600px;
   margin: 0 auto;
   padding: 40px 20px;
-  background-color: #313131;
-  border: 2px solid #e67e22;S
+  background-color: #000000 !important;
+  border: 2px solid #363432;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-
-
-
-
- 
