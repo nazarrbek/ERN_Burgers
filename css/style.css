@@ -571,7 +571,7 @@ button#submitBtn:hover {
   background: #f39c12;
   color: white;
   cursor: pointer;
-  padding: 14px 20px;
+  padding: 15px 20px;
   width: 100%;
   border: none;
   text-align: left;
@@ -603,7 +603,10 @@ button#submitBtn:hover {
 }
 
 .accordion-item.active + .accordion-panel {
-  padding: 5px 20px 10px 20px; 
+  padding: 20px 25px;  /* Увеличиваем отступы */
+  max-height: 500px;    /* Ограничиваем максимальную высоту */
+  overflow: auto;       /* Делаем так, чтобы текст прокручивался при необходимости */
+  margin-top: 10px;     /* Немного увеличиваем верхний отступ */
 }
 
 .subscribe-container {
