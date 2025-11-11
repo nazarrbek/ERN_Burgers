@@ -1052,8 +1052,8 @@ body {
 /* Default (light) */
 body.light-mode {
   --site-bg: #ffffff;
-  --site-text: #212529;
-  --navbar-bg: #f8f9fa; /* светлый navbar */
+  --site-text: #bebebe;
+  --navbar-bg: #464646; /* светлый navbar */
   --stats-bg: #f8f9fa;
 }
 
@@ -1160,6 +1160,18 @@ body.dark-mode {
 [data-bs-theme="dark"] #about {
   color: #fff; /* весь текст внутри about становится белым */
 }
+#promo {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #313131;
+  border: 2px solid #e67e22;S
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
 
 
 

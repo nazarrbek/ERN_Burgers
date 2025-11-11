@@ -39,13 +39,20 @@ function validateOrderForm() {
 const toggleButton = document.getElementById('theme-toggle');
 const currentTheme = localStorage.getItem('theme');
 
+// Устанавливаем текущую тему при загрузке страницы
 if (currentTheme === 'dark') {
   document.body.classList.add('dark-mode');
-  toggleButton.textContent = '☀️ Light Mode';
+  toggleButton.textContent = '☀️ Light Mode';  // Текст для темной темы
+} else {
+  document.body.classList.add('light-mode');
+  toggleButton.textContent = '🌙 Dark Mode';  // Текст для светлой темы
 }
 
+// Обработчик для кнопки переключения темы
 toggleButton.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
+  document.body.classList.toggle('light-mode');
+  
   if (document.body.classList.contains('dark-mode')) {
     localStorage.setItem('theme', 'dark');
     toggleButton.textContent = '☀️ Light Mode';
