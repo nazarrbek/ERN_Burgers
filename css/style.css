@@ -1170,4 +1170,50 @@ body.dark-mode {
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+/* Темная тема для формы регистрации */
+body.dark-mode #registration {
+  background-color: #2d2d2d;  /* Темный фон для формы */
+  color: #f1f1f1;             /* Белый текст для формы */
+}
+
+/* Ввод в темной теме - текст в полях ввода должен быть светлым */
+body.dark-mode #registration input {
+  background-color: #444;     /* Темные поля ввода */
+  color: #fff;                /* Светлый текст в полях */
+  border: 1px solid #666;     /* Светлый бордер */
+}
+
+/* Добавим цвет для текста в полях ввода в темной теме */
+body.dark-mode #registration input::placeholder {
+  color: #aaa;                /* Светлый цвет для текста подсказки */
+}
+
+/* Подсветка полей при фокусе */
+body.dark-mode #registration input:focus {
+  border-color: #ffcc00;      /* Желтая подсветка при фокусе */
+  box-shadow: 0 0 5px #ffcc00;/* Светлый обводок */
+}
+
+/* Кнопка регистрации в темной теме */
+body.dark-mode #registration button {
+  background-color: #ffcc00;  /* Яркая кнопка */
+  color: #000;                /* Черный текст на кнопке */
+  border: none;
+}
+
+/* Для ярких меток и подсказок */
+body.dark-mode #registration label {
+  color: #f1f1f1;             /* Светлый цвет для меток */
+}
+
+/* Для текста ошибок в темной теме */
+body.dark-mode .error {
+  color: #e74c3c;             /* Красный цвет для ошибок */
+}
+
+/* Для текста успешной регистрации */
+body.dark-mode .success {
+  color: #27ae60;             /* Зеленый цвет для успешных сообщений */
+}
+
 
