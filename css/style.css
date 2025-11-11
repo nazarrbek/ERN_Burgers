@@ -1218,5 +1218,55 @@ body.dark-mode .error {
 body.dark-mode .success {
   color: #27ae60;             /* Зеленый цвет для успешных сообщений */
 }
+/* === Subscribe Section === */
+.subscribe-section {
+  background-color: var(--subscribe-bg-color);
+  padding: 50px 20px;
+  border-radius: 15px;
+  max-width: 700px;
+  margin: 60px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: background-color 0.4s, color 0.4s;
+}
+
+.subscribe-section h2 {
+  color: var(--subscribe-text-color);
+}
+
+.subscribe-section p {
+  color: var(--subscribe-text-color);
+  font-size: 1.1em;
+}
+
+.subscribe-section button {
+  background-color: var(--subscribe-btn-bg);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-section button:hover {
+  background-color: var(--subscribe-btn-hover-bg);
+}
+
+/* Default (light mode) */
+body.light-mode {
+  --subscribe-bg-color: #fff5e1;
+  --subscribe-text-color: #d35400;
+  --subscribe-btn-bg: #e67e22;
+  --subscribe-btn-hover-bg: #d35400;
+}
+
+/* Dark mode */
+body.dark-mode {
+  --subscribe-bg-color: #2c2c2c;
+  --subscribe-text-color: #f1f1f1;
+  --subscribe-btn-bg: #e67e22;
+  --subscribe-btn-hover-bg: #d35400;
+}
 
 
