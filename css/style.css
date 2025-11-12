@@ -1268,5 +1268,194 @@ body.dark-mode {
   --subscribe-btn-bg: #e67e22;
   --subscribe-btn-hover-bg: #d35400;
 }
+/* Стили для кнопки закрытия */
+#subscribePopup .close-popup {
+  position: absolute; /* Абсолютное позиционирование */
+  top: 10px; /* Отступ от верхнего края контейнера */
+  right: -160px; /* Увеличиваем отступ справа */
+  font-size: 20px; /* Уменьшаем размер кнопки */
+  cursor: pointer; /* Курсор в виде руки */
+  background: none; /* Убираем фон */
+  border: none; /* Убираем рамку */
+  color: #e67e22; /* Цвет кнопки */
+  z-index: 9999; /* Увеличиваем z-index, чтобы кнопка была поверх других элементов */
+}
+
+/* Стили для кнопки при наведении */
+#subscribePopup .close-popup:hover {
+  color: #d35400; /* Цвет кнопки при наведении */
+}
+/* Добавляем фон под заголовком для светлой темы */
+header.container.text-center.my-4 {
+  background-color: #ffcc00;  /* Светлый фон */
+  padding: 15px 20px;         /* Отступы вокруг заголовка */
+  border-radius: 10px;        /* Скругление углов */
+  color: #212529;             /* Темный текст */
+}
+
+/* Для тёмной темы */
+body.dark-mode header.container.text-center.my-4 {
+  background-color: #333;  /* Темный фон */
+  color: #f1f1f1;          /* Светлый текст */
+}
+/* --- Для светлой темы --- */
+body.light-mode .burger-info {
+  color: #0b0c0e;  /* Темный цвет текста */
+}
+
+body.light-mode .burger-info h2 {
+  color: #ffcc00;  /* Яркий желтый цвет для заголовков */
+}
+
+body.light-mode .burger-info p {
+  color: #666;  /* Более темный цвет для описания */
+}
+
+/* --- Для темной темы --- */
+body.dark-mode .burger-info {
+  color: #f1f1f1;  /* Светлый цвет текста для темной темы */
+}
+
+body.dark-mode .burger-info h2 {
+  color: #ffcc00;  /* Яркий желтый цвет для заголовков */
+}
+
+body.dark-mode .burger-info p {
+  color: #bbb;  /* Более светлый цвет для описания */
+}
+/* --- Для светлой темы --- */
+body.light-mode .list-group-item {
+  background-color: #fff;  /* Белый фон для карточек */
+  color: #212529;          /* Тёмный текст */
+}
+
+body.light-mode .list-group-item a {
+  color: #f39c12;          /* Яркий цвет для ссылок */
+}
+
+body.light-mode .list-group-item:hover {
+  background-color: #f1f1f1;  /* Легкое затемнение фона при наведении */
+}
+
+body.light-mode .container {
+  color: #212529;  /* Тёмный текст для всего контейнера */
+}
+
+/* --- Для темной темы --- */
+body.dark-mode .list-group-item {
+  background-color: #333;  /* Темный фон для карточек */
+  color: #f1f1f1;          /* Светлый текст */
+}
+
+body.dark-mode .list-group-item a {
+  color: #ffcc00;          /* Желтый цвет для ссылок */
+}
+
+body.dark-mode .list-group-item:hover {
+  background-color: #444;  /* Темное затемнение фона при наведении */
+}
+
+body.dark-mode .container {
+  color: #f1f1f1;  /* Светлый текст для всего контейнера */
+}
+
+/* Дополнительные стили для улучшения читаемости */
+body.dark-mode .list-group-item a:hover {
+  color: #f39c12; /* Желтый цвет ссылок при наведении */
+}
+/* Переменные для светлой и темной темы */
+:root {
+  --bg-color-light: #ffffff;
+  --bg-color-dark: #121212;
+  --text-color-light: #000000;
+  --text-color-dark: #ffffff;
+  --form-bg-light: #f8f9fa;
+  --form-bg-dark: #333;
+  --btn-bg-light: #28a745;
+  --btn-bg-dark: #218838;
+  --btn-hover-bg-light: #218838;
+  --btn-hover-bg-dark: #1e7e34;
+}
+
+/* Светлая тема */
+body.light-mode {
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+}
+
+body.light-mode .contact-form {
+  background-color: var(--form-bg-light);
+}
+
+body.light-mode .btn {
+  background-color: var(--btn-bg-light);
+}
+
+body.light-mode .btn:hover {
+  background-color: var(--btn-hover-bg-light);
+}
+
+/* Темная тема */
+body.dark-mode {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+body.dark-mode .contact-form {
+  background-color: var(--form-bg-dark);
+}
+
+body.dark-mode .btn {
+  background-color: var(--btn-bg-dark);
+}
+
+body.dark-mode .btn:hover {
+  background-color: var(--btn-hover-bg-dark);
+}
+
+/* Класс для фонового цвета формы */
+.contact-form {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.contact-form input, .contact-form textarea {
+  background-color: transparent;
+  color: inherit;
+  border: 1px solid #ccc;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  border-color: #66afe9;
+  outline: none;
+}
+
+.contact-form .btn {
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+}
+
+.contact-form .btn:hover {
+  transform: scale(1.05);
+}
+/* Для светлой темы */
+body.light-mode ::placeholder {
+  color: #000; /* Черный цвет для плейсхолдера в светлой теме */
+}
+
+/* Для темной темы */
+body.dark-mode ::placeholder {
+  color: #fff; /* Белый цвет для плейсхолдера в темной теме */
+}
+
+
+
+
+
 
 
