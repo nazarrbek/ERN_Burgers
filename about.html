@@ -162,16 +162,22 @@
   <script src="js/jquery-features.js"></script>
   <script src="js/script-nazarbek.js"></script>
 
-  <!-- Инициализация карты -->
-  <script>
-    var map = L.map('map').setView([51.1694, 71.4491], 13);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-    L.marker([51.1694, 71.4491]).addTo(map)
-      .bindPopup('<b>ERN Burgers</b><br>Астана, Казахстан')
-      .openPopup();
-  </script>
+<!-- Инициализация карты -->
+<script>
+  // Центрируем карту на EXPO в Астане
+  var map = L.map('map').setView([51.0905, 71.4165], 15);
+
+  // Добавляем слой с картой
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Добавляем маркер на EXPO
+  L.marker([51.0905, 71.4165]).addTo(map)
+    .bindPopup('<b>EXPO Center</b><br>Астана, Казахстан')
+    .openPopup();
+</script>
+
 
 </body>
 </html>
