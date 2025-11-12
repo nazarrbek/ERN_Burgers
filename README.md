@@ -8,7 +8,6 @@
 It includes pages for the menu, gallery, catering services, contact information, and more.
 The project is built using **HTML5** and **CSS3**, focusing on clean design and easy navigation.
 
-> GitHub Repository: [nazarrbek/ERN_Burgers](https://github.com/nazarrbek/ERN_Burgers)
 
 ---
 
