@@ -1452,6 +1452,36 @@ body.light-mode ::placeholder {
 body.dark-mode ::placeholder {
   color: #fff; /* Белый цвет для плейсхолдера в темной теме */
 }
+/* Для светлой темы */
+body.light-mode .form-control {
+  background-color: #fff; /* Белый фон для полей ввода */
+  color: #000; /* Черный текст в полях */
+}
+
+body.light-mode .form-control::placeholder {
+  color: #888; /* Светлый текст в placeholder для светлой темы */
+}
+
+body.light-mode .btn {
+  background-color: #ff7043; /* Цвет кнопки для светлой темы */
+  color: #fff; /* Белый текст на кнопке */
+}
+
+/* Для темной темы */
+body.dark-mode .form-control {
+  background-color: #333; /* Темный фон для полей ввода */
+  color: #fff; /* Белый текст в полях */
+}
+
+body.dark-mode .form-control::placeholder {
+  color: #bbb; /* Светлый текст в placeholder для темной темы */
+}
+
+body.dark-mode .btn {
+  background-color: #f39c12; /* Цвет кнопки для темной темы */
+  color: #fff; /* Белый текст на кнопке */
+}
+
 
 
 
