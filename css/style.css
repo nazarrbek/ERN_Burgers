@@ -1452,34 +1452,64 @@ body.light-mode ::placeholder {
 body.dark-mode ::placeholder {
   color: #fff; /* Белый цвет для плейсхолдера в темной теме */
 }
-/* Для светлой темы */
-body.light-mode .form-control {
-  background-color: #fff; /* Белый фон для полей ввода */
-  color: #000; /* Черный текст в полях */
+/* Переменные для фона и текста */
+:root {
+  --bg-color-light: #ffffff;  /* Светлый фон */
+  --text-color-light: #333333; /* Темный текст для светлой темы */
+  
+  --bg-color-dark: #2c2c2c;  /* Темный фон */
+  --text-color-dark: #f1f1f1; /* Светлый текст для темной темы */
 }
 
-body.light-mode .form-control::placeholder {
-  color: #888; /* Светлый текст в placeholder для светлой темы */
-}
+/* Стиль для контейнера с текстом */
+#contentText {
+ background-color: var(--bg-color-light);  /* Фон для светлой темы */
+  color: var(--text-color-light);  /* Цвет текста для светлой темы */
+  padding: 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
+  /* Центрирование по горизонтали */
+  width: 80%;    /* Устанавливаем ширину */
+  margin: 0 auto; /* Центрируем по горизонтали */
 
-body.light-mode .btn {
-  background-color: #ff7043; /* Цвет кнопки для светлой темы */
-  color: #fff; /* Белый текст на кнопке */
+  /* Для центрирования по вертикали */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Выравнивание по вертикали */
+  align-items: center; /* Центрирование по горизонтали */
 }
 
 /* Для темной темы */
-body.dark-mode .form-control {
-  background-color: #333; /* Темный фон для полей ввода */
-  color: #fff; /* Белый текст в полях */
+body.dark-mode #contentText {
+  background-color: var(--bg-color-dark);  /* Фон для темной темы */
+  color: var(--text-color-dark);  /* Цвет текста для темной темы */
 }
 
-body.dark-mode .form-control::placeholder {
-  color: #bbb; /* Светлый текст в placeholder для темной темы */
+/* Стиль для заголовков и других текстов, чтобы они менялись при смене тем */
+.text-dark-fix {
+  color: var(--text-color-light);
 }
 
-body.dark-mode .btn {
-  background-color: #f39c12; /* Цвет кнопки для темной темы */
-  color: #fff; /* Белый текст на кнопке */
+body.dark-mode .text-dark-fix {
+  color: var(--text-color-dark);
+}
+
+/* Дополнительные стили для поля поиска, если необходимо */
+#highlightSearch {
+  width: 80%;              /* Устанавливаем ширину, чтобы элемент не занимал всю ширину */
+  padding: 8px;
+  margin: 20px auto;       /* Горизонтальные отступы auto для центрирования */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+  display: block;   
+}
+
+body.dark-mode #highlightSearch {
+  background-color: #444;  /* Темный фон для поля поиска */
+  color: #fff;  /* Светлый текст для поля поиска */
+  border-color: #666;  /* Цвет рамки в темной теме */
 }
 
 
