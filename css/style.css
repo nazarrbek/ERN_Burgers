@@ -1268,5 +1268,23 @@ body.dark-mode {
   --subscribe-btn-bg: #e67e22;
   --subscribe-btn-hover-bg: #d35400;
 }
+/* Стили для кнопки закрытия */
+#subscribePopup .close-popup {
+  position: absolute; /* Абсолютное позиционирование */
+  top: 10px; /* Отступ от верхнего края контейнера */
+  right: -160px; /* Увеличиваем отступ справа */
+  font-size: 20px; /* Уменьшаем размер кнопки */
+  cursor: pointer; /* Курсор в виде руки */
+  background: none; /* Убираем фон */
+  border: none; /* Убираем рамку */
+  color: #e67e22; /* Цвет кнопки */
+  z-index: 9999; /* Увеличиваем z-index, чтобы кнопка была поверх других элементов */
+}
+
+/* Стили для кнопки при наведении */
+#subscribePopup .close-popup:hover {
+  color: #d35400; /* Цвет кнопки при наведении */
+}
+
 
 
