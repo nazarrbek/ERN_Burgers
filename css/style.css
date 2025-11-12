@@ -1285,6 +1285,46 @@ body.dark-mode {
 #subscribePopup .close-popup:hover {
   color: #d35400; /* Цвет кнопки при наведении */
 }
+/* Добавляем фон под заголовком для светлой темы */
+header.container.text-center.my-4 {
+  background-color: #ffcc00;  /* Светлый фон */
+  padding: 15px 20px;         /* Отступы вокруг заголовка */
+  border-radius: 10px;        /* Скругление углов */
+  color: #212529;             /* Темный текст */
+}
+
+/* Для тёмной темы */
+body.dark-mode header.container.text-center.my-4 {
+  background-color: #333;  /* Темный фон */
+  color: #f1f1f1;          /* Светлый текст */
+}
+/* --- Для светлой темы --- */
+body.light-mode .burger-info {
+  color: #0b0c0e;  /* Темный цвет текста */
+}
+
+body.light-mode .burger-info h2 {
+  color: #ffcc00;  /* Яркий желтый цвет для заголовков */
+}
+
+body.light-mode .burger-info p {
+  color: #666;  /* Более темный цвет для описания */
+}
+
+/* --- Для темной темы --- */
+body.dark-mode .burger-info {
+  color: #f1f1f1;  /* Светлый цвет текста для темной темы */
+}
+
+body.dark-mode .burger-info h2 {
+  color: #ffcc00;  /* Яркий желтый цвет для заголовков */
+}
+
+body.dark-mode .burger-info p {
+  color: #bbb;  /* Более светлый цвет для описания */
+}
+
+
 
 
 
